@@ -4,6 +4,7 @@
   "description": "Rosie can order something for you!",
   "main": "lib/rosiebot.js",
   "scripts": {
+    "start": "node bin/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
