@@ -1,0 +1,14 @@
+{
+  "name": "rosie-slackbot",
+  "version": "1.0.0",
+  "description": "Rosie can order something for you!",
+  "main": "lib/rosiebot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "slackbots": "0.3.0"
+  }
+}
