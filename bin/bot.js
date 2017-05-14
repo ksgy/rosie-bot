@@ -7,9 +7,9 @@ var dbPath = process.env.BOT_DB_PATH;
 var name = process.env.BOT_NAME;
 
 var rosiebot = new RosieBot({
-    token: token,
-    dbPath: dbPath,
-    name: name
+	token: token,
+	dbPath: dbPath,
+	name: name
 });
 
 rosiebot.run();
