@@ -2,7 +2,7 @@
 
 ### Hello my dear, I'm Rosie.
 
-![assets/images/rosie-avatar.png](Rosie)
+![https://github.com/ksgy/rosie-bot/raw/master/assets/images/rosie-avatar.png](Rosie)
 
 I'm FOODit's lunch lady. I'm here to help with test orders from restaurants.
 
