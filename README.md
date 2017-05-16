@@ -4,7 +4,7 @@
 
 ![https://github.com/ksgy/rosie-bot/raw/master/assets/images/rosie-avatar.png](Rosie)
 
-I'm FOODit's lunch lady. I'm here to help with test orders from restaurants.
+I'm [FOODit](https://github.com/foodit)'s lunch lady. I'm here to help with test orders from restaurants.
 
 ## How to order
 
@@ -24,7 +24,7 @@ Rosie order me 5 bruschetta
 
 
 ## Dev
-Rosie's kitchen is in [https://dashboard.heroku.com/apps/rosiebot](Heroku's) building now. Let @ksgy know if you need access.
+Rosie's kitchen is in [Heroku](https://dashboard.heroku.com/apps/rosiebot)'s building now. Let [ksgy](https://github.com/ksgy) know if you need access.
 
 ## Thanks
-Thanks for [mailto:hello@marinakiss.com](Marina Kiss) for the avatar! ツ
+Thanks to [Marina Kiss](mailto:hello@marinakiss.com) for the avatar! ツ
