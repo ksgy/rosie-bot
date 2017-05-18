@@ -8,11 +8,15 @@ I'm [FOODit](https://github.com/foodit)'s lunch lady. I'm here to help with test
 
 ## How to order
 
-Join slack channel `#rosies-kitchen` and you can order food like:
+Join slack channel `#rosies-kitchen` and you can tell Rosie what would you like:
 
 ```
-Rosie order me 3 pizza
-Rosie order me 5 bruschetta
+rosie order me a pizza 
+rosie order me 2 bruschetta 
+rosie order me 2 bruschetta and 5 pizza 
+rosie order me something
+
+rosie show me the menu`
 ```
 
 ## TODO
