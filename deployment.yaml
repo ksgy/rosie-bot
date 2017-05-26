@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: rosie-bot-sushisurprise
+  name: rosie-bot-sushisurprise
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rosie-bot-sushisurprise
+  template:
+    metadata:
+      labels:
+        name: rosie-bot-sushisurprise
+        app: rosie-bot-sushisurprise
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: default-pool
+      containers:
+      - image: gcr.io/foodit-dev/rosie-bot-sushisurprise:v0.0.3
+        name: rosie-bot-sushisurprise
+        env:
+          - name: BOT_API_KEY
+            value: "__REPLACE_FROM_SLACK_BOTS__"
+        ports:
+        - containerPort: 8080
+          name: http-server
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          timeoutSeconds: 1
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+

@@ -28,7 +28,13 @@ rosie show me the menu`
 
 
 ## Dev
-Rosie's kitchen is in [Heroku](https://dashboard.heroku.com/apps/rosiebot)'s building now. Let [ksgy](https://github.com/ksgy) know if you need access.
+Rosie's kitchen is in K8S, deployment process:
+
+```bash
+docker build -t gcr.io/foodit-dev/rosie-bot-sushisurprise:v0.0.1 .
+gcloud docker -- push gcr.io/foodit-dev/rosie-bot-sushisurprise:v0.0.1
+kubectl apply -f deployment.yaml
+```
 
 ## Thanks
 Thanks to [Marina Kiss](mailto:hello@marinakiss.com) for the avatar! ツ
