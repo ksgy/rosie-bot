@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: rosie-bot-dev-fooditkitchen
+  name: rosie-bot-dev-fooditkitchen
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rosie-bot-dev-fooditkitchen
+  template:
+    metadata:
+      labels:
+        name: rosie-bot-dev-fooditkitchen
+        app: rosie-bot-dev-fooditkitchen
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: default-pool
+      containers:
+      - image: gcr.io/foodit-dev/rosie-bot-dev-fooditkitchen:v0.0.1
+        name: rosie-bot-dev-fooditkitchen
+        env:
+          - name: BOT_API_KEY
+            value: "__REPLACE_FROM_SLACK_BOTS__"
+        ports:
+        - containerPort: 8080
+          name: http-server
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          timeoutSeconds: 1
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+
