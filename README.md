@@ -8,7 +8,7 @@ I'm [FOODit](https://github.com/foodit)'s lunch lady. I'm here to help with test
 
 ## How to order
 
-Join slack channel `#rosies-kitchen` and you can tell Rosie what would you like:
+Join slack channel `#rosies-orders` and you can tell Rosie what would you like:
 
 ```
 rosie order me a pizza 
@@ -28,7 +28,7 @@ rosie show me the menu`
 
 
 ## Dev
-Rosie's kitchen is in [Heroku](https://dashboard.heroku.com/apps/rosiebot)'s building now. Let [ksgy](https://github.com/ksgy) know if you need access.
+Rosie's kitchen is in Kubernetes. See `dev` pods for the pod name: `kubectl get pods`
 
 ## Thanks
 Thanks to [Marina Kiss](mailto:hello@marinakiss.com) for the avatar! ツ

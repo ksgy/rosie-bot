@@ -21,6 +21,9 @@ var server = http.createServer(function (req, res) {
         res.writeHead(200, { "Content-Type": "application/json" });
         res.write('{ "status": "ok" }');
     }
+    if (req.url === '/ordersomething') {
+        rosiebot._reply('rosie order me something');
+    }
     res.end();
 });
 
