@@ -5,10 +5,18 @@
   "main": "lib/rosiebot.js",
   "scripts": {
     "start": "node bin/bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test-unit",
+    "test-unit": "NODE_ENV=test mocha -w --require co-mocha 'lib/*.spec.js'"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "co-mocha": "1.1.2",
+    "mocha": "2.5.3",
+    "sinon": "1.17.4",
+    "sinon-chai": "2.8.0"
+  },
   "dependencies": {
     "axios": "^0.16.1",
     "lodash": "^4.17.4",
