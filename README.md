@@ -11,9 +11,9 @@ I'm [FOODit](https://github.com/foodit)'s lunch lady. I'm here to help with test
 Join slack channel `#rosies-orders` and you can tell Rosie what would you like:
 
 ```
-rosie order me a pizza 
-rosie order me 2 bruschetta 
-rosie order me 2 bruschetta and 5 pizza 
+rosie order me a pizza
+rosie order me 2 bruschetta
+rosie order me 2 bruschetta and 5 pizza
 rosie order me something
 rosie order me something from autotestgrill
 
@@ -21,7 +21,7 @@ rosie show me the menu`
 ```
 
 *Note:* All orders are made to `fooditkitchen` on `dev`. If you'd like to order from `prod` you have to let Rosie know by:
- 
+
 ```
 rosie order me something from autotestgrill PROD
 ```
@@ -38,6 +38,13 @@ rosie order me something from autotestgrill PROD
 
 ## Dev
 Rosie's kitchen is in Kubernetes. See `dev` pods for the pod name: `kubectl get pods`
+
+## Building
+```bash
+$ docker build -t gcr.io/foodit-dev/rosie-bot-dev-fooditkitchen:v0.0.2 .
+$ gcloud docker -- push gcr.io/foodit-dev/rosie-bot-dev-fooditkitchen:v0.0.2
+$ kubectl apply -f deployment.yaml
+```
 
 ## Testing
 There are some really simple unit tests. Run by `npm test` (watch enabled by default)
