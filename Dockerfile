@@ -6,6 +6,7 @@ RUN mkdir -p /usr/src/app /usr/src/app/node_modules /usr/src/app/lib /usr/src/ap
 COPY ./bin/bot.js /usr/src/app/bin
 COPY ./lib/helpers.js /usr/src/app/lib
 COPY ./lib/rosiebot.js /usr/src/app/lib
+COPY ./lib/restaurants.js /usr/src/app/lib
 COPY ./node_modules /usr/src/app/node_modules
 
 # Create worker user
